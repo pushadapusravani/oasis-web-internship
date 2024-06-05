@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    background: url('bubbles.jpg'); 
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    backdrop-filter: blur(10px); 
+}
+
+
+.box {
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.5); 
+    backdrop-filter: blur(15px);
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.calc {
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.4); 
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.screen {
+    position: relative; 
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(500px);
+    border-radius: 20px;
+    padding: 20px; 
+    margin-bottom: 10px;
+    text-align: right;
+    font-size: 30px;
+    height: 60px; 
+    animation: popUp 0.3s ;
+  }
+  
+  @keyframes popUp {
+    from {
+      transform: translateY(20px); 
+      opacity: 0; 
+    }
+    to {
+      transform: translateY(0); 
+      opacity: 1; 
+    }
+  }
+  
+.screen #display {
+    font-family: 'Poppins';
+    font-size: 40px; 
+    text-shadow: 1px 1px 2px rgba(7, 7, 7, 0.5);
+    transition: color 0.3s; 
+    color: #3d2914; 
+  }
+
+
+
+.buttons table {
+    width: 100%;
+}
+
+.buttons td {
+    padding: 10px;
+    text-align: center;
+}
+
+.buttons button {
+    font-family: 'Poppins';
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #c598af; 
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: #835f6c; 
+}
+
+.theme-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.theme-button p {
+    margin-left: 5px;
+    font-family: 'Poppins';
+    font-size: 14px;
+    color: #fff;
+}
+
+.theme-icon {
+    font-size: 20px;
+    color: #fff;
+}
+
+.active {
+    background-color: #f26c4f; 
+}

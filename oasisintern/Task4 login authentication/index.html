@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Authentication</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="background">
+        <div id="startpage">
+            <span id="header">Sign Up</span>
+            <br>
+            <br>
+            <input type="input" id="inituser" placeholder="Username" class="input">
+            <br>
+            <br>
+            <input type="password" id="initpass" placeholder="Password" class="input">
+            <br>
+            <br>
+            <br>
+            <button onclick="signin()" id="button" class="enterbtn">Register</button>
+            <br>
+            <br>
+            <div id="buttons">
+                <button onclick="showStuff()" id="show_button" class="btn">Show Password</button>
+                <button onclick="resetinputs()" id="enter_button" class="btn">Reset</button>
+                <br>
+                <button onclick="toggleForm()" id="toggle_button" class="btn">Go To The Login Page</button>
+            </div>
+            <br>
+            <span id="status"></span>
+            <br>
+        </div>
+
+        <div id="container">
+            <span id="header">Login</span>
+            <br>
+            <br>
+            <input type="input" id="user" placeholder="Username" class="input">
+            <br>
+            <br>
+            <input type="password" id="pass" placeholder="Password" class="input">
+            <br>
+            <br>
+            <br>
+            <button onclick="check()" id="button" class="enterbtn">Sign In</button>
+            <br>
+            <br>
+            <div id="buttons">
+                <button onclick="showStuff()" id="show_button" class="btn">Show Password</button>
+                <button onclick="resettrys()" id="enter_button" class="btn">Reset</button>
+                <br>
+                <button onclick="toggleForm()" id="toggle_button" class="btn">Go To The Sign Up Page</button>
+            </div>
+            <br>
+            <span id="status"></span>
+            <br>
+        </div>
+
+        <div id="page">
+            <button id="bckbtn" onclick="back()">Go To Login Page</button>
+            <br>
+            <br>
+            <span id="pagetitle">WELCOME!!!, </span>
+            <br>
+            <br>
+            <br>
+            <span id="pagetxt">Congrats!!!!!, you've logged in! </span>
+            <br>
+            <br>
+            <span id="pagebody">Welcome this is the login page for you .this is the task 4 of web development and designing in
+                               oasis infobyte internship. </span>
+            <br>
+            <br>
+            <span id="pagetitle"></span>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+    <script>
+        const lastUsername = localStorage.getItem('lastUsername');
+        if (lastUsername) {
+            document.getElementById('pagetitle').textContent += lastUsername;
+        }
+    </script>
+
+</body>
+</html>

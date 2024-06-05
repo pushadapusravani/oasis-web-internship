@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To-Do List</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <table>
+                <tr>
+                    <td><img src="./images/logo.jpg" alt="Logo" class="logo"></td>
+                    <td><h1><strong style="font-size: 45px; text-shadow: 3px 3px #f8b45a;font-family: Georgia, serif;">To-Do List</strong></h1></td>
+                </tr>
+            </table>
+        </div>
+        <div class="boxes">
+            <div class="add-task-box">
+                <h3>ADD TASK</h3>
+                <input type="text" id="taskInput" placeholder="Task">
+                <div class="description-container">
+                    <textarea id="descriptionInput" placeholder="Description"></textarea>
+                    <label for="descriptionInput"></label>
+                </div>
+                <button id="addButton">Add Task</button>
+            </div>
+        
+            <div class="created-task-box">
+                <h1>Created Tasks</h1>
+                <ul id="todoList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
